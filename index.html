@@ -100,7 +100,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><em>@author</em> <em>xunguang (<a href="mailto:&#120;&#x75;&#x6e;&#x67;&#117;&#97;&#110;&#x67;&#64;&#x62;&#x6c;&#97;&#99;&#x6b;&#45;&#x73;&#x6b;&#x79;&#108;&#x69;&#110;&#101;&#46;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#x69;&#111;">&#120;&#x75;&#x6e;&#x67;&#117;&#97;&#110;&#x67;&#64;&#x62;&#x6c;&#97;&#99;&#x6b;&#45;&#x73;&#x6b;&#x79;&#108;&#x69;&#110;&#101;&#46;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#x69;&#111;</a>)</em></p>
+        <ul>
+<li><p><em>@author</em> <em>xunguang (<a href="mailto:&#x78;&#x75;&#110;&#103;&#x75;&#97;&#110;&#103;&#x40;&#98;&#108;&#x61;&#99;&#107;&#45;&#x73;&#x6b;&#x79;&#x6c;&#105;&#110;&#x65;&#46;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#105;&#x6f;">&#x78;&#x75;&#110;&#103;&#x75;&#97;&#110;&#103;&#x40;&#98;&#108;&#x61;&#99;&#107;&#45;&#x73;&#x6b;&#x79;&#x6c;&#105;&#110;&#x65;&#46;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#105;&#x6f;</a>)</em></p>
 <p><em>@brief</em></p>
 <p><em>@version</em> <em>0.1</em></p>
 <p><em>@date</em> <em>2022-11-03</em></p>
@@ -123,26 +124,45 @@
 
 <h1 id="level-4——基于GitHub上的Stable-Diffusion-web-UI-开源项目的图片生成（Windows系统）"><a href="#level-4——基于GitHub上的Stable-Diffusion-web-UI-开源项目的图片生成（Windows系统）" class="headerlink" title="level 4——基于GitHub上的Stable Diffusion web UI 开源项目的图片生成（Windows系统）"></a>level 4——基于GitHub上的Stable Diffusion web UI 开源项目的图片生成（Windows系统）</h1><blockquote>
 <h4 id="写在前面的话："><a href="#写在前面的话：" class="headerlink" title="写在前面的话："></a>写在前面的话：</h4><p>先说些悲伤的事——咱家是AMD核显，No NVIDIA 显卡（矿老板、黄牛贩子、皮衣黄 Fxxk you···），so CUDA应该是不行了（不过可以用一些其他手段搞到一个能用的NV驱动看能不能欺骗一下CUDA），现在只能试试看pytorch-cpu能不能跑Stable Diffusion web UI的AI算法模型···</p>
-</blockquote>
-<h2 id="一、为AI深度学习准备能进行的环境配置——默认已有python3环境"><a href="#一、为AI深度学习准备能进行的环境配置——默认已有python3环境" class="headerlink" title="一、为AI深度学习准备能进行的环境配置——默认已有python3环境"></a>一、为AI深度学习准备能进行的环境配置——默认已有python3环境</h2><h3 id="Anaconda——python的包管理和环境管理器"><a href="#Anaconda——python的包管理和环境管理器" class="headerlink" title="Anaconda——python的包管理和环境管理器"></a>Anaconda——python的包管理和环境管理器</h3><h5 id="Q：为什么要安这个？（觉得不需要可以不安）"><a href="#Q：为什么要安这个？（觉得不需要可以不安）" class="headerlink" title="Q：为什么要安这个？（觉得不需要可以不安）"></a>Q：为什么要安这个？（觉得不需要可以不安）</h5><h6 id="A：方便配置py的虚拟编译环境，降低python各种库的试错成本和学习尝试风险"><a href="#A：方便配置py的虚拟编译环境，降低python各种库的试错成本和学习尝试风险" class="headerlink" title="A：方便配置py的虚拟编译环境，降低python各种库的试错成本和学习尝试风险"></a>A：方便配置py的虚拟编译环境，<strong>降低</strong>python各种库的<strong>试错成本</strong>和学习尝试风险</h6><h5 id="Q：怎么安？"><a href="#Q：怎么安？" class="headerlink" title="Q：怎么安？"></a>Q：怎么安？</h5><h6 id="A：-官网-Anaconda-Anaconda-Distribution-下载安装（太慢啦）或国内镜像软件源下载安装（快）例如-清华的镜像站-Index-of-x2F-anaconda-x2F-archive-x2F-清华大学开源软件镜像站-Tsinghua-Open-Source-Mirror"><a href="#A：-官网-Anaconda-Anaconda-Distribution-下载安装（太慢啦）或国内镜像软件源下载安装（快）例如-清华的镜像站-Index-of-x2F-anaconda-x2F-archive-x2F-清华大学开源软件镜像站-Tsinghua-Open-Source-Mirror" class="headerlink" title="A：[官网](Anaconda | Anaconda Distribution)下载安装（太慢啦）或国内镜像软件源下载安装（快）例如[清华的镜像站](Index of &#x2F;anaconda&#x2F;archive&#x2F; | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror)"></a>A：[官网](<a target="_blank" rel="noopener" href="https://www.anaconda.com/products/">Anaconda | Anaconda Distribution</a>)下载安装（太慢啦）或国内镜像软件源下载安装（快）例如[清华的镜像站](<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">Index of &#x2F;anaconda&#x2F;archive&#x2F; | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a>)</h6><h5 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h5><ul>
-<li>官网下载点击之后可能会跳转订阅注册页面，此时需要鼠标右击下载按钮选择在新标签页中打开就可以直接下载了</li>
-<li>在镜像站下载要注意版本问题，一般根据不同项的名称和上传时间确认</li>
-<li>本人选择的是Anaconda3-2022.10-Windows-x86_64.exe (可执行安装程序)</li>
-<li>安装时最好勾选上自动把anaconda添加进PATH（系统环境变量）里</li>
-<li>安装完成后在cmd里输入<code>conda list</code> 检查安装是否成功</li>
+<h3 id="应需求对原来的“代码-命令行”的启动启动方式作出一些优化，并给出点击自动启动的方式配置：（对应不同的配置过程）"><a href="#应需求对原来的“代码-命令行”的启动启动方式作出一些优化，并给出点击自动启动的方式配置：（对应不同的配置过程）" class="headerlink" title="应需求对原来的“代码+命令行”的启动启动方式作出一些优化，并给出点击自动启动的方式配置：（对应不同的配置过程）"></a>应需求对原来的“代码+命令行”的启动启动方式作出一些优化，并给出点击自动启动的方式配置：（对应不同的配置过程）</h3><h2 id="方式一：“代码-命令行”的启动（默认已有git）"><a href="#方式一：“代码-命令行”的启动（默认已有git）" class="headerlink" title="方式一：“代码+命令行”的启动（默认已有git）"></a>方式一：“代码+命令行”的启动（默认已有git）</h2><h2 id="方式二：点击启动（默认已有python3环境和git）"><a href="#方式二：点击启动（默认已有python3环境和git）" class="headerlink" title="方式二：点击启动（默认已有python3环境和git）"></a>方式二：点击启动（默认已有python3环境和git）</h2></blockquote>
+<h1 id="方式一配置过程："><a href="#方式一配置过程：" class="headerlink" title="方式一配置过程："></a>方式一配置过程：</h1><h2 id="一、为AI深度学习准备的环境配置——默认已有python3环境"><a href="#一、为AI深度学习准备的环境配置——默认已有python3环境" class="headerlink" title="一、为AI深度学习准备的环境配置——默认已有python3环境"></a>一、为AI深度学习准备的环境配置——默认已有python3环境</h2><h3 id="（可选择安装）Anaconda——python的包管理和环境管理器"><a href="#（可选择安装）Anaconda——python的包管理和环境管理器" class="headerlink" title="（可选择安装）Anaconda——python的包管理和环境管理器"></a>（<em>可选择安装</em>）Anaconda——python的包管理和环境管理器</h3><blockquote>
+<h4 id="注：安装使用Anaconda就默认使用方式一：“代码-命令行”进行启动"><a href="#注：安装使用Anaconda就默认使用方式一：“代码-命令行”进行启动" class="headerlink" title="注：安装使用Anaconda就默认使用方式一：“代码+命令行”进行启动"></a>注：安装使用Anaconda就默认使用方式一：“代码+命令行”进行启动</h4></blockquote>
+<h4 id="Q：为什么要安这个？（觉得不需要可以不安）"><a href="#Q：为什么要安这个？（觉得不需要可以不安）" class="headerlink" title="Q：为什么要安这个？（觉得不需要可以不安）"></a>Q：为什么要安这个？（觉得不需要可以不安）</h4><h4 id="A：方便配置py的虚拟编译环境，降低python各种库的试错成本和学习尝试风险"><a href="#A：方便配置py的虚拟编译环境，降低python各种库的试错成本和学习尝试风险" class="headerlink" title="A：方便配置py的虚拟编译环境，降低python各种库的试错成本和学习尝试风险"></a>A：方便配置py的虚拟编译环境，<strong>降低</strong>python各种库的<strong>试错成本</strong>和学习尝试风险</h4><h4 id="Q：怎么安？"><a href="#Q：怎么安？" class="headerlink" title="Q：怎么安？"></a>Q：怎么安？</h4><h5 id="A：-官网-Anaconda-Anaconda-Distribution-下载安装（太慢啦）或国内镜像软件源下载安装（快）例如-清华的镜像站-Index-of-x2F-anaconda-x2F-archive-x2F-清华大学开源软件镜像站-Tsinghua-Open-Source-Mirror"><a href="#A：-官网-Anaconda-Anaconda-Distribution-下载安装（太慢啦）或国内镜像软件源下载安装（快）例如-清华的镜像站-Index-of-x2F-anaconda-x2F-archive-x2F-清华大学开源软件镜像站-Tsinghua-Open-Source-Mirror" class="headerlink" title="A：[官网](Anaconda | Anaconda Distribution)下载安装（太慢啦）或国内镜像软件源下载安装（快）例如[清华的镜像站](Index of &#x2F;anaconda&#x2F;archive&#x2F; | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror)"></a>A：[官网](<a target="_blank" rel="noopener" href="https://www.anaconda.com/products/">Anaconda | Anaconda Distribution</a>)下载安装（太慢啦）或国内镜像软件源下载安装（快）例如[清华的镜像站](<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">Index of &#x2F;anaconda&#x2F;archive&#x2F; | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a>)</h5><h5 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h5><ul>
+<li><h6 id="官网下载点击之后可能会跳转订阅注册页面，此时需要-鼠标右击下载按钮—-gt-选择在新标签页中打开就可以直接下载了"><a href="#官网下载点击之后可能会跳转订阅注册页面，此时需要-鼠标右击下载按钮—-gt-选择在新标签页中打开就可以直接下载了" class="headerlink" title="官网下载点击之后可能会跳转订阅注册页面，此时需要  鼠标右击下载按钮—&gt;选择在新标签页中打开就可以直接下载了"></a>官网下载点击之后可能会跳转订阅注册页面，此时需要  鼠标右击下载按钮—&gt;选择在新标签页中打开就可以直接下载了</h6></li>
+<li><h6 id="在镜像站下载要注意版本问题，一般根据不同项的名称和上传时间确认"><a href="#在镜像站下载要注意版本问题，一般根据不同项的名称和上传时间确认" class="headerlink" title="在镜像站下载要注意版本问题，一般根据不同项的名称和上传时间确认"></a>在镜像站下载要注意版本问题，一般根据不同项的名称和上传时间确认</h6></li>
+<li><h6 id="本人选择的是Anaconda3-2022-10-Windows-x86-64-exe-可执行安装程序"><a href="#本人选择的是Anaconda3-2022-10-Windows-x86-64-exe-可执行安装程序" class="headerlink" title="本人选择的是Anaconda3-2022.10-Windows-x86_64.exe (可执行安装程序)"></a>本人选择的是Anaconda3-2022.10-Windows-x86_64.exe (可执行安装程序)</h6></li>
+<li><h6 id="安装时记住安装的位置，最好不要放C盘"><a href="#安装时记住安装的位置，最好不要放C盘" class="headerlink" title="安装时记住安装的位置，最好不要放C盘"></a>安装时记住安装的位置，最好不要放C盘</h6></li>
+<li><h6 id="安装时最好勾选上自动把anaconda添加进PATH（系统环境变量）里"><a href="#安装时最好勾选上自动把anaconda添加进PATH（系统环境变量）里" class="headerlink" title="安装时最好勾选上自动把anaconda添加进PATH（系统环境变量）里"></a>安装时最好勾选上自动把anaconda添加进PATH（系统环境变量）里</h6></li>
+<li><h6 id="安装完成后在cmd里输入conda-list-检查安装是否成功"><a href="#安装完成后在cmd里输入conda-list-检查安装是否成功" class="headerlink" title="安装完成后在cmd里输入conda list 检查安装是否成功"></a>安装完成后在cmd里输入<code>conda list</code> 检查安装是否成功</h6></li>
 </ul>
-<h6 id="另外，安装好anaconda后，我们可以搭建一个简单的py虚拟编译环境"><a href="#另外，安装好anaconda后，我们可以搭建一个简单的py虚拟编译环境" class="headerlink" title="另外，安装好anaconda后，我们可以搭建一个简单的py虚拟编译环境"></a>另外，安装好anaconda后，我们可以搭建一个简单的py虚拟编译环境</h6><ol>
-<li><p>先对anaconda进行换源，具体详见<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">anaconda | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></p>
+<h6 id="另外，安装好anaconda后，我们可以搭建一个简单的、非系统PATH下的py编译环境："><a href="#另外，安装好anaconda后，我们可以搭建一个简单的、非系统PATH下的py编译环境：" class="headerlink" title="另外，安装好anaconda后，我们可以搭建一个简单的、非系统PATH下的py编译环境："></a>另外，安装好anaconda后，我们可以搭建一个简单的、非系统PATH下的py编译环境：</h6><ol>
+<li><p>先对Anaconda进行换源，具体详见<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">anaconda | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a>（换源就是换一个下载来源，这里我们换的那几个都是国内有名的源，完全是免费的）</p>
+<h6 id="PS：建议能换就换，不然默认的源是国外网址（下东西慢还不稳定，稍微下个大点的东西就超时报错···）"><a href="#PS：建议能换就换，不然默认的源是国外网址（下东西慢还不稳定，稍微下个大点的东西就超时报错···）" class="headerlink" title="PS：建议能换就换，不然默认的源是国外网址（下东西慢还不稳定，稍微下个大点的东西就超时报错···）"></a>PS：建议能换就换，不然默认的源是国外网址（下东西慢还不稳定，稍微下个大点的东西就超时报错···）</h6></li>
+<li><p>打开<strong>cmd</strong>窗口或者“<strong>Anaconda Prompt</strong>”程序或者“<strong>Anaconda Powershell Prompt</strong>”程序（</p>
 </li>
-<li><p>选择一个位置（文件夹）放置新建的环境，在命令行中cd 进入该文件夹（在Anaconda文件夹里会直接放到Anaconda\envs\路径下）</p>
-</li>
-<li><p>使用<code>conda create -n 环境名 python=版本号 -y</code>新建一个环境，例如:使用</p>
-<p><code>conda create -n pytorch_env python=3.9</code> ,遇到y&#x2F;n 输入y即可</p>
+<li><p>使用“<code>conda create -n 环境名 python=版本号 -y</code>”格式的命令新建一个py编译环境，例如:使用</p>
+<p><code>conda create -n pytorch_env python=3.10.6 -y</code> （做演示用），</p>
+<p><code>conda create -n novelai python=3.10.6 -y</code>（等下在这个环境里操作）,</p>
+<p>在创建过程中遇到问 y&#x2F;n 输入y即可</p>
+<blockquote>
+<h6 id="注：python版本最好是3-10-6或大于这个版本号，因为项目的建议就是3-10-6"><a href="#注：python版本最好是3-10-6或大于这个版本号，因为项目的建议就是3-10-6" class="headerlink" title="注：python版本最好是3.10.6或大于这个版本号，因为项目的建议就是3.10.6"></a>注：python版本最好是3.10.6或大于这个版本号，因为项目的建议就是3.10.6</h6></blockquote>
 </li>
 <li><p>创建完成后，输入命令<code>conda env list</code>，显示现有的环境（前面是新建时取的环境名字，后面是环境所在文件路径，base是默认自带的）：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">D:\Program\Anaconda\my_envs&gt;conda env list</span><br><span class="line"># conda environments:</span><br><span class="line">#</span><br><span class="line">base                     D:\Program\Anaconda</span><br><span class="line">novelai                  D:\Program\Anaconda\envs\novelai</span><br><span class="line">pytorch_env              D:\Program\Anaconda\envs\pytorch_env</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">D:\Program\Anaconda\my_envs&gt;conda env list</span><br><span class="line"># conda environments:</span><br><span class="line">#</span><br><span class="line">base                     D:\Program\Anaconda</span><br><span class="line">novelai                  D:\Program\Anaconda\envs\novelai</span><br><span class="line">pytorch_env              D:\Program\Anaconda\envs\pytorch_env</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h6 id="注：自己创建的非base的环境的文件夹，都会统一放在Anaconda文件夹里的envs文件夹内"><a href="#注：自己创建的非base的环境的文件夹，都会统一放在Anaconda文件夹里的envs文件夹内" class="headerlink" title="注：自己创建的非base的环境的文件夹，都会统一放在Anaconda文件夹里的envs文件夹内"></a>注：自己创建的非base的环境的文件夹，都会统一放在Anaconda文件夹里的envs文件夹内</h6></blockquote>
+</li>
+<li><p>在这里提前<strong>给pip换源</strong>，不然之后在下载东西时会体验到什么是折磨···</p>
+<p>首先激活novelai 环境（在这个环境里安装依赖）：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conda activate novelai</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 激活成功后显示：</span><br><span class="line">(novelai) 当前目录&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后直接粘贴下面的命令给pip换源（换的是清华源，pip暂时不要用阿里源，因为更新缓慢···）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h3><h4 id="获取安装命令"><a href="#获取安装命令" class="headerlink" title="获取安装命令"></a>获取安装命令</h4><p>这个玩意通过命令行安装,，具体命令可以百度看博客，也可以直接到[官网](<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">Start Locally | PyTorch</a>)根据个人使用平台查看最新安装命令（到官网后，进入”Get Started“下，下拉到如下图的page页面并根据个人平台选择）<img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202211012107230.png" alt="image-20221101210752130">,</p>
+<h3 id="（必安）Pytorch"><a href="#（必安）Pytorch" class="headerlink" title="（必安）Pytorch"></a>（<em>必安</em>）Pytorch</h3><blockquote>
+<h4 id="注：pytorch是这个项目能跑起来的必要依赖库之一，理论上可以等下和其他依赖库一起安装，但是在那个时候安装的Pytorch不一定是CPU版（核显佬的哭泣···），所以建议提前安装好CPU版的"><a href="#注：pytorch是这个项目能跑起来的必要依赖库之一，理论上可以等下和其他依赖库一起安装，但是在那个时候安装的Pytorch不一定是CPU版（核显佬的哭泣···），所以建议提前安装好CPU版的" class="headerlink" title="注：pytorch是这个项目能跑起来的必要依赖库之一，理论上可以等下和其他依赖库一起安装，但是在那个时候安装的Pytorch不一定是CPU版（核显佬的哭泣···），所以建议提前安装好CPU版的"></a>注：pytorch是这个项目能跑起来的必要依赖库之一，理论上可以等下和其他依赖库一起安装，但是在那个时候安装的Pytorch不一定是CPU版（核显佬的哭泣···），所以建议提前安装好CPU版的</h4></blockquote>
+<h4 id="获取安装命令"><a href="#获取安装命令" class="headerlink" title="获取安装命令"></a>获取安装命令</h4><p>这个玩意通过命令行安装,，具体命令可以百度看博客，也可以直接到[官网](<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">Start Locally | PyTorch</a>)根据个人使用平台查看最新安装命令（到官网后，进入”Get Started“下，下拉到如下图的page页面并根据个人平台选择）<img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202211012107230.png" alt="image-20221101210752130">,</p>
 <ol>
 <li>上图第一行”<strong>PyTorch Build</strong>“的三个选项分别是Stable（<em><strong>稳定版</strong></em>）、Preview（<em><strong>先行测试版</strong></em>）、LTS（<em><strong>长期支持版</strong></em>），选择第一个和第三个都无所谓，但不推荐选第二个</li>
 <li>上图第二行”<strong>Your OS</strong>“选择本机操作系统就行</li>
@@ -156,46 +176,53 @@
 
 <h5 id="用conda安装"><a href="#用conda安装" class="headerlink" title="用conda安装"></a>用conda安装</h5><p>为了降低试错风险，方便包管理，使用<strong>Anaconda Prompt命令行</strong>进入在Anaconda里创建的自定义环境来安装pytorch：</p>
 <ol>
-<li><p>进入Anaconda Prompt程序，（<strong>不是cmd</strong>），然后进入提前准备好的py环境（最好是python 3.10.6），（没有就建一个： <code>conda create -n novelai python==3.10.6</code>）, 在命令行里输入<code>conda activate novelai</code>，出现如下提示则表示激活成功：（完成激活后再进行下一步）</p>
+<li><p>进入<strong>Anaconda Prompt</strong>程序，（<strong>不是cmd</strong>），然后进入提前准备好的py环境（最好是python 3.10.6），（没有就建一个： <code>conda create -n novelai python==3.10.6</code>）, 在命令行里输入<code>conda activate novelai</code>，出现如下提示则表示激活成功：（完成激活后再进行下一步）</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(novelai) D:\Program\Anaconda\my_envs&gt;</span><br></pre></td></tr></table></figure>
 
-<p>其中，<code>(novelai)</code> 是py环境名，后面是工作目录，</p>
+<blockquote>
+<h6 id="其中，-novelai-是py环境名，后面是工作目录-这里的这个功罪目录随意-，"><a href="#其中，-novelai-是py环境名，后面是工作目录-这里的这个功罪目录随意-，" class="headerlink" title="其中，(novelai) 是py环境名，后面是工作目录(这里的这个功罪目录随意)，"></a>其中，<code>(novelai)</code> 是py环境名，后面是工作目录(这里的这个功罪目录随意)，</h6></blockquote>
 </li>
 <li><p>把pytorch官网使用conda下载的命令粘贴进Anaconda Prompt已经激活完成的python 3.10.6环境里：</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202211020044891.png" alt="image-20221102004450723"></p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch torchvision torchaudio cpuonly -c pytorch</span><br></pre></td></tr></table></figure>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202211020044891.png" alt="image-20221102004450723"></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch torchvision torchaudio cpuonly</span><br></pre></td></tr></table></figure>
 
 <p>回车后等待安装相关依赖和包，有问<strong>y&#x2F;n</strong>的一律选y</p>
 </li>
 <li><p>等待安装完成后，输入<code>python</code> 进入交互模式，在该模式下依次输入：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="built_in">print</span>(torch.__version__)</span><br></pre></td></tr></table></figure>
 
-<p>若最后的效果图呈现如下，则表示成功：（否则重新执行上一步）</p>
+<p>若最后的效果图呈现如下，则表示成功：（否则重新执行第2 步pytorch的下载）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(novelai) D:\Program\Anaconda\my_envs&gt;python</span><br><span class="line">Python <span class="number">3.10</span><span class="number">.6</span> | packaged by conda-forge | (main, Oct <span class="number">24</span> <span class="number">2022</span>, <span class="number">16</span>:02:<span class="number">16</span>) [MSC v<span class="number">.1916</span> <span class="number">64</span> bit (AMD64)] on win32</span><br><span class="line"><span class="type">Type</span> <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> <span class="keyword">or</span> <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> torch</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(torch.__version__)</span><br><span class="line"><span class="number">1.13</span><span class="number">.0</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="二、开始Stable-Diffusion-web-UI项目文件的配置"><a href="#二、开始Stable-Diffusion-web-UI项目文件的配置" class="headerlink" title="二、开始Stable Diffusion web UI项目文件的配置"></a>二、开始Stable Diffusion web UI项目文件的配置</h2><ol>
 <li><h5 id="下载NovalAI模型训练文件-点击此处-文件很大大大······"><a href="#下载NovalAI模型训练文件-点击此处-文件很大大大······" class="headerlink" title="下载NovalAI模型训练文件(点击此处) (文件很大大大······)"></a>下载NovalAI<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1BJ-5Zo7FnCxh7ezJtYEqIg?pwd=jack">模型训练文件(点击此处)</a> (文件很大大大······)</h5></li>
 <li><h5 id="获取Stable-Diffusion-web-UI项目源代码"><a href="#获取Stable-Diffusion-web-UI项目源代码" class="headerlink" title="获取Stable Diffusion web UI项目源代码"></a>获取Stable Diffusion web UI项目源代码</h5><ul>
-<li><p>可以直接进入GitHub里的项目地址直接下载一份源代码的zip压缩文件并解压到存放代码的文件夹，项目地址<code>https://github.com/AUTOMATIC1111/stable-diffusion-webui</code></p>
+<li><p>可以直接进入GitHub里的项目地址直接下载一份源文件的zip压缩包并解压到<strong>存放项目文件的文件夹</strong>，项目地址<code>https://github.com/AUTOMATIC1111/stable-diffusion-webui</code></p>
 </li>
-<li><p>也可以直接在存放代码的文件夹里打开git命令行，输入命令：</p>
+<li><p>（<strong>默认有git并且git已配置完成</strong>）也可以直接在存放代码的文件夹里打开git命令行，输入命令：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui</span><br></pre></td></tr></table></figure>
 
-<p>然后，当前文件夹会创建一个与项目同名的文件夹 <code>stable-diffusion-webui</code> 并将下载完成的源代码存入该文件夹内</p>
+<p>上面是直接和GitHub服务器建立连接从GitHub处下载文件，简单来讲，如果暂时登不上、进不去GitHub且又没有“科学魔法”且又没有dev-sidecar，那就用下面这个命令：</p>
+<p>（原理是在<strong>url</strong>之前添上了”<strong>gitclone.com&#x2F;</strong>“，这个技巧对热门GitHub资源都有效）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://gitclone.com/github.com/AUTOMATIC1111/stable-diffusion-webui.git </span><br></pre></td></tr></table></figure>
+
+<p>然后，当前文件夹会创建一个与项目同名的文件夹 <code>stable-diffusion-webui</code> 并将下载完成的源文件都存入该文件夹内</p>
 </li>
 </ul>
 </li>
 <li><h5 id="将下载的NovalAI模型训练文件压缩包里的Stable-diffusion-rar解压到项目源代码文件夹stable-diffusion-webui里的对应位置"><a href="#将下载的NovalAI模型训练文件压缩包里的Stable-diffusion-rar解压到项目源代码文件夹stable-diffusion-webui里的对应位置" class="headerlink" title="将下载的NovalAI模型训练文件压缩包里的Stable-diffusion.rar解压到项目源代码文件夹stable-diffusion-webui里的对应位置:"></a>将下载的NovalAI模型训练文件压缩包里的<code>Stable-diffusion.rar</code>解压到项目源代码文件夹<code>stable-diffusion-webui</code>里的对应位置:</h5><p><code>···\stable-diffusion-webui\models\</code>，并替换同名文件，完成后删除此处的压缩包</p>
 <ul>
-<li><p>还是进入Anaconda Prompt程序，切换到novelai的py环境：<code>conda activate novelai</code>，cd 到该项目的根目录下，安装第三方依赖库：</p>
+<li><p>还是进入<strong>Anaconda Prompt程序</strong>，激活到novelai的py环境：<code>conda activate novelai</code>，cd 到该项目的根目录下，安装第三方依赖库：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
 
-<p>下载的东西有点多，而且网络有波动可能会下载失败（提示标红出错后，记得把上面的命令多试几次），成功以后<strong>不要退出Anaconda Prompt程序</strong>，</p>
+<p>下载的东西有点多，而且网络有波动可能会下载失败，（pip如果没换源下载得又慢问题又多）（提示标红出错后，记得把上面的命令多试几次），成功以后<strong>不要退出Anaconda Prompt程序</strong>，</p>
 </li>
 <li><p>上一步完成后还需要安装一个插件库deepdanbooru，用来给AI跑图训练时提取信息，特别是使用别人自制的训练模型时：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">本人选择用pip进行下载，首先检查pip的更新</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">然后是下载这个插件库，这里因为当时在下面修改launch.py文件时出了一些问题，就直接从报错里提取的这个插件库的绝对地址进行下载，正常情况下可以到官网下载后去百度怎么更快地下载（毕竟这个库还是比较大了）</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">python -m pip install git+https://github.com/KichangKim/DeepDanbooru.git@d91a2963bf87c6a770d74894667e9ffa9f6de7ff#egg=deepdanbooru[tensorflow] tensorflow==2.10.0 tensorflow-io==0.27.0 --prefer-binary</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">本人选择用pip进行下载，首先检查pip的更新</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">python -m pip install --upgrade pip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">然后是下载这个插件库，这里因为当时在下面修改launch.py文件时出了一些问题，就直接从报错里提取的这个插件库的绝对地址进行下载</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">python -m pip install git+https://github.com/KichangKim/DeepDanbooru.git@d91a2963bf87c6a770d74894667e9ffa9f6de7ff#egg=deepdanbooru[tensorflow] tensorflow==2.10.0 tensorflow-io==0.27.0 --prefer-binary</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>到此基础配置阶段已经大体完成。</p>
+<blockquote>
+<h4 id="不过通过上面的代码安装有个缺点，就是不能及时得到自动更新，所以——建议可以先不下载这个库，等到最后进行命令运行时，会自动检测下载这个库"><a href="#不过通过上面的代码安装有个缺点，就是不能及时得到自动更新，所以——建议可以先不下载这个库，等到最后进行命令运行时，会自动检测下载这个库" class="headerlink" title="不过通过上面的代码安装有个缺点，就是不能及时得到自动更新，所以——建议可以先不下载这个库，等到最后进行命令运行时，会自动检测下载这个库"></a>不过通过上面的代码安装有个缺点，就是不能及时得到自动更新，所以——建议可以先不下载这个库，等到最后进行命令运行时，会自动检测下载这个库</h4></blockquote>
+<p>到此<strong>基础配置阶段已经大体完成</strong>。</p>
 </li>
 </ul>
 </li>
@@ -208,17 +235,23 @@
 <h2 id="三、开始run项目测试一下（本地算法部署）"><a href="#三、开始run项目测试一下（本地算法部署）" class="headerlink" title="三、开始run项目测试一下（本地算法部署）"></a>三、开始run项目测试一下（本地算法部署）</h2><ol>
 <li><h5 id="延续上一步操作，激活novelai的py环境，然后cd-到该项目的根目录下，完成后命令行里显示如下："><a href="#延续上一步操作，激活novelai的py环境，然后cd-到该项目的根目录下，完成后命令行里显示如下：" class="headerlink" title="延续上一步操作，激活novelai的py环境，然后cd 到该项目的根目录下，完成后命令行里显示如下："></a>延续上一步操作，激活novelai的py环境，然后cd 到该项目的根目录下，完成后命令行里显示如下：</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(novelai) D:\CodeBases\stable-diffusion-webui&gt;</span><br></pre></td></tr></table></figure>
 
-<p>输入命令：</p>
+<p>输入命令：（<strong>run项目的命令</strong>）</p>
 <p><code>python launch.py --precision full --no-half --deepdanbooru --use-cpu all</code> </p>
-<p>或</p>
+<p>或（一般下面这个没用）：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python launch.py --precision full --no-half --deepdanbooru --use-cpu all sd interrogate gfpgan bsrgan esrgan scunet codeformer</span><br></pre></td></tr></table></figure>
 
-<p>等待（第一次部署大概20-40分钟不等），成功后如下图：</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202211021953095.png" alt="image-20221102195350865"></p>
+<p>等待，</p>
+<ul>
+<li>若在上面没有下载<strong>deepdanbooru</strong>库，则会在自检时先下载这个库，但有可能会下载超时报错，若这样，请多次重试，或在报错信息中提取网址，并将其加在<code>python -m pip install </code>的后面执行；</li>
+<li>然后再run项目</li>
+<li>若之前步骤的都没问题，<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ug411879W/?is_story_h5=false&p=1&share_from=ugc&share_medium=android&share_plat=android&share_session_id=ce19415d-0fc3-4a0e-bf27-587ec95ce2a3&share_source=QQ&share_tag=s_i&timestamp=1667406099&unique_k=mFMMnhr">请参照此处（点击进入）</a></li>
+</ul>
+<p>（第一次部署大概20-40分钟不等），成功后如下图：</p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202211021953095.png" alt="image-20221102195350865"></p>
 </li>
 <li><h5 id="上图倒数第二行给出了本地URL，这是开启成功的标志，"><a href="#上图倒数第二行给出了本地URL，这是开启成功的标志，" class="headerlink" title="上图倒数第二行给出了本地URL，这是开启成功的标志，"></a>上图倒数第二行给出了本地URL，这是开启成功的标志，</h5><p>但<strong>不要关闭</strong>这个命令行，<strong>因为它才是完成接下来一些列操作的本体</strong></p>
 <p>将其复制后在浏览器中粘贴进入（page页面如下）：</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202211021956138.png" alt="image-20221102195658059"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202211021956138.png" alt="image-20221102195658059"></p>
 </li>
 <li><h5 id="开始配置图片的生成要素，进行效果测试（在txt2img标签下操作）"><a href="#开始配置图片的生成要素，进行效果测试（在txt2img标签下操作）" class="headerlink" title="开始配置图片的生成要素，进行效果测试（在txt2img标签下操作）"></a>开始配置图片的生成要素，进行效果测试（在<strong>txt2img</strong>标签下操作）</h5><h4 id="注：CPU算力珍贵，且用且珍惜"><a href="#注：CPU算力珍贵，且用且珍惜" class="headerlink" title="注：CPU算力珍贵，且用且珍惜"></a>注：CPU算力珍贵，且用且珍惜</h4><ul>
 <li><p><strong>Prompt</strong>：这一行设置希望AI生成的画作中包含的“<strong>元素</strong>”，用英文词汇描述，例如可以输入：</p>
@@ -249,20 +282,88 @@
 </ul>
 </li>
 <li><h5 id="开始生成"><a href="#开始生成" class="headerlink" title="开始生成:"></a>开始生成:</h5><p>完成上面的图片生成参数设置后，点击右上角的<strong>Generate</strong>开始生成，这时Generate的按钮下方会出现一个蓝色进度条，此时CPU（GPU）就开始工作了，（如果没有蓝色进度条或一闪而过，就表示当前跑不起来，这时就要检查各项配置了），耐心等待图片的生成：（图有点丑，毕竟刚开始用没经验）</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202211030005626.png" alt="image-20221103000544258"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202211030005626.png" alt="image-20221103000544258"></p>
 <p>下面是按照其他人的案例配置生成的效果图：（我还改了一下的···狗头保命）</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202211030020800.png" alt="00002-815804347-masterpiece, best quality,obliques , 1girl, magic, vivid, looking at viewer, from above, black hair, black eyes, floating, flowi"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202211030020800.png" alt="00002-815804347-masterpiece, best quality,obliques , 1girl, magic, vivid, looking at viewer, from above, black hair, black eyes, floating, flowi"></p>
 </li>
 </ol>
+<h2 id="四、（可做）添加点击即run项目的设置"><a href="#四、（可做）添加点击即run项目的设置" class="headerlink" title="四、（可做）添加点击即run项目的设置"></a>四、（可做）添加点击即run项目的设置</h2><h5 id="简单地讲，很麻烦。"><a href="#简单地讲，很麻烦。" class="headerlink" title="简单地讲，很麻烦。"></a>简单地讲，很麻烦。</h5><ul>
+<li><h6 id="如果一开始就弄的是命令行运行，现在想转点击即run，那我建议直接重开——重新按照方式二建立一个项目"><a href="#如果一开始就弄的是命令行运行，现在想转点击即run，那我建议直接重开——重新按照方式二建立一个项目" class="headerlink" title="如果一开始就弄的是命令行运行，现在想转点击即run，那我建议直接重开——重新按照方式二建立一个项目"></a>如果一开始就弄的是命令行运行，现在想转点击即run，那我建议直接重开——重新按照方式二建立一个项目</h6></li>
+<li><h6 id="如果两种启动方式都想要，建议由方式二的点击即run开始，逐步添加命令行运行···"><a href="#如果两种启动方式都想要，建议由方式二的点击即run开始，逐步添加命令行运行···" class="headerlink" title="如果两种启动方式都想要，建议由方式二的点击即run开始，逐步添加命令行运行···"></a>如果两种启动方式都想要，建议由方式二的点击即run开始，逐步添加命令行运行···</h6></li>
+</ul>
+<p>当然，本人也在探究一种邪门的方法···就是在方式一可以成功跑图之后（此时的依赖包全在所创建的非path的py环境里），从理论上讲，可以按照方式二中项目文件的配置流程重新配置一个项目文件，然后按照方式二的部署方式进行部署，这时因为依赖文件是齐全的，所以不需要重新下载依赖库（<strong>在理论上可行</strong>）</p>
+<h1 id="方式二配置过程："><a href="#方式二配置过程：" class="headerlink" title="方式二配置过程："></a>方式二配置过程：</h1><h2 id="一、准备的环境配置——默认已有python3环境"><a href="#一、准备的环境配置——默认已有python3环境" class="headerlink" title="一、准备的环境配置——默认已有python3环境"></a>一、准备的环境配置——默认已有python3环境</h2><h3 id="（可选择安装）Anaconda"><a href="#（可选择安装）Anaconda" class="headerlink" title="（可选择安装）Anaconda"></a>（<em>可选择安装</em>）Anaconda</h3><blockquote>
+<h4 id="Anaconda安与不安可自行选择，它们的区别就在于："><a href="#Anaconda安与不安可自行选择，它们的区别就在于：" class="headerlink" title="Anaconda安与不安可自行选择，它们的区别就在于："></a>Anaconda安与不安可自行选择，它们的区别就在于：</h4><h5 id="不安anaconda，那之后大概几个G大小的一堆依赖库就会默认加装在本地path路径里的python环境里"><a href="#不安anaconda，那之后大概几个G大小的一堆依赖库就会默认加装在本地path路径里的python环境里" class="headerlink" title="不安anaconda，那之后大概几个G大小的一堆依赖库就会默认加装在本地path路径里的python环境里"></a>不安anaconda，那之后大概几个G大小的一堆依赖库就会默认加装在本地path路径里的python环境里</h5><h6 id="安了anaconda，这些依赖库被安在哪将由你自行决定，且它们与本地path路径里的python环境是隔离的"><a href="#安了anaconda，这些依赖库被安在哪将由你自行决定，且它们与本地path路径里的python环境是隔离的" class="headerlink" title="安了anaconda，这些依赖库被安在哪将由你自行决定，且它们与本地path路径里的python环境是隔离的"></a>安了anaconda，这些依赖库被安在哪将由你自行决定，且它们与本地path路径里的python环境是隔离的</h6></blockquote>
+<ul>
+<li>选择安装，就去方式一那里把Anaconda的安装流程走一遍（包括<strong>anaconda的换源，py环境的新建，pip的更新和换源</strong>），括号里的这<strong>三件事一定要完成</strong>，因为这关系到后面的实际安装体验</li>
+<li>选择不安装，就确保本地的python最好要大于等于3.10.6</li>
+</ul>
+<h3 id="（可选择安装）dev-sidecar（强烈推荐）"><a href="#（可选择安装）dev-sidecar（强烈推荐）" class="headerlink" title="（可选择安装）dev-sidecar（强烈推荐）"></a>（<em>可选择安装</em>）dev-sidecar（强烈推荐）</h3><p>简单地说，除非你会”<strong>科学上网</strong>“或者会”<strong>神奇魔法</strong>“或者你有”<strong>边车</strong>“，不然你在后面的初始化依赖库安装时，一定会受尽折磨···</p>
+<p>说人话就是，你要么需要有能和GitHub建立稳定通信的方式，要么有着能加速git clone的手段；</p>
+<p>对一般人而言，实现前者一般用“<strong>边车</strong>”（dev-sidecar），后者的话，一般是找镜像网站或代理网站加速下载</p>
+<h3 id="Pytorch（就后面的结果来看，暂时不需要单独下载）"><a href="#Pytorch（就后面的结果来看，暂时不需要单独下载）" class="headerlink" title="Pytorch（就后面的结果来看，暂时不需要单独下载）"></a>Pytorch（就后面的结果来看，暂时不需要单独下载）</h3><h2 id="二、项目文件的配置——部分参照方式一"><a href="#二、项目文件的配置——部分参照方式一" class="headerlink" title="二、项目文件的配置——部分参照方式一"></a>二、项目文件的配置——部分参照方式一</h2><ol>
+<li><h4 id="下载NovalAI模型训练文件——同方式一"><a href="#下载NovalAI模型训练文件——同方式一" class="headerlink" title="下载NovalAI模型训练文件——同方式一"></a>下载NovalAI模型训练文件——同方式一</h4></li>
+<li><h4 id="获取Stable-Diffusion-web-UI项目源代码——同方式一"><a href="#获取Stable-Diffusion-web-UI项目源代码——同方式一" class="headerlink" title="获取Stable Diffusion web UI项目源代码——同方式一"></a>获取Stable Diffusion web UI项目源代码——同方式一</h4></li>
+<li><h4 id="仅需要NovalAI模型训练文件放置到项目的对应文件夹下，"><a href="#仅需要NovalAI模型训练文件放置到项目的对应文件夹下，" class="headerlink" title="仅需要NovalAI模型训练文件放置到项目的对应文件夹下，"></a>仅需要NovalAI模型训练文件放置到项目的对应文件夹下，</h4><h4 id="即-stable-diffusion-webui-models-Stable-diffusion"><a href="#即-stable-diffusion-webui-models-Stable-diffusion" class="headerlink" title="即~\stable-diffusion-webui\models\Stable-diffusion"></a>即<code>~\stable-diffusion-webui\models\Stable-diffusion</code></h4></li>
+<li><h4 id="最重要的一步，修改项目根目录下的launch-py文件（重点）和webui-user-bat文件（重点）："><a href="#最重要的一步，修改项目根目录下的launch-py文件（重点）和webui-user-bat文件（重点）：" class="headerlink" title="最重要的一步，修改项目根目录下的launch.py文件（重点）和webui-user.bat文件（重点）："></a>最重要的一步，修改项目根目录下的launch.py文件（重点）和webui-user.bat文件（重点）：</h4><ul>
+<li><p>右键编辑该launch.py文件（建议用VScode这种代码编辑器打开，实在不行用记事本也可以），</p>
+<p>然后ctrl+F全局查找含<code>github</code>的代码部分，发现共11个结果，需要更改的为中间的九个（如下图）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gfpgan_package = os.environ.get(<span class="string">&#x27;GFPGAN_PACKAGE&#x27;</span>, <span class="string">&quot;git+https://github.com/TencentARC/GFPGAN.git@8d2447a2d918f8eba5a4a01463fd48e45126a379&quot;</span>)</span><br><span class="line">clip_package = os.environ.get(<span class="string">&#x27;CLIP_PACKAGE&#x27;</span>, <span class="string">&quot;git+https://github.com/openai/CLIP.git@d50d76daa670286dd6cacf3bcd80b5e4823fc8e1&quot;</span>)</span><br><span class="line">deepdanbooru_package = os.environ.get(<span class="string">&#x27;DEEPDANBOORU_PACKAGE&#x27;</span>, <span class="string">&quot;git+https://github.com/KichangKim/DeepDanbooru.git@d91a2963bf87c6a770d74894667e9ffa9f6de7ff&quot;</span>)</span><br><span class="line"></span><br><span class="line">xformers_windows_package = os.environ.get(<span class="string">&#x27;XFORMERS_WINDOWS_PACKAGE&#x27;</span>, <span class="string">&#x27;https://github.com/C43H66N12O12S2/stable-diffusion-webui/releases/download/f/xformers-0.0.14.dev0-cp310-cp310-win_amd64.whl&#x27;</span>)</span><br><span class="line"></span><br><span class="line">stable_diffusion_repo = os.environ.get(<span class="string">&#x27;STABLE_DIFFUSION_REPO&#x27;</span>, <span class="string">&quot;https://github.com/CompVis/stable-diffusion.git&quot;</span>)</span><br><span class="line">taming_transformers_repo = os.environ.get(<span class="string">&#x27;TAMING_REANSFORMERS_REPO&#x27;</span>, <span class="string">&quot;https://github.com/CompVis/taming-transformers.git&quot;</span>)</span><br><span class="line">k_diffusion_repo = os.environ.get(<span class="string">&#x27;K_DIFFUSION_REPO&#x27;</span>, <span class="string">&#x27;https://github.com/crowsonkb/k-diffusion.git&#x27;</span>)</span><br><span class="line">codeformer_repo = os.environ.get(<span class="string">&#x27;CODEFORMET_REPO&#x27;</span>, <span class="string">&#x27;https://github.com/sczhou/CodeFormer.git&#x27;</span>)</span><br><span class="line">blip_repo = os.environ.get(<span class="string">&#x27;BLIP_REPO&#x27;</span>, <span class="string">&#x27;https://github.com/salesforce/BLIP.git&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>改为如下</strong>：（为了加速下载的速度，原理可自行去百度<code>https://ghproxy.com/</code>和<code>gitclone.com/</code>有什么用）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gfpgan_package = os.environ.get(<span class="string">&#x27;GFPGAN_PACKAGE&#x27;</span>, <span class="string">&quot;git+https://gitclone.com/github.com/TencentARC/GFPGAN.git@8d2447a2d918f8eba5a4a01463fd48e45126a379&quot;</span>)</span><br><span class="line">clip_package = os.environ.get(<span class="string">&#x27;CLIP_PACKAGE&#x27;</span>, <span class="string">&quot;git+https://gitclone.com/github.com/openai/CLIP.git@d50d76daa670286dd6cacf3bcd80b5e4823fc8e1&quot;</span>)</span><br><span class="line">deepdanbooru_package = os.environ.get(<span class="string">&#x27;DEEPDANBOORU_PACKAGE&#x27;</span>, <span class="string">&quot;git+https://ghproxy.com/https://github.com/KichangKim/DeepDanbooru.git@d91a2963bf87c6a770d74894667e9ffa9f6de7ff&quot;</span>)</span><br><span class="line"></span><br><span class="line">xformers_windows_package = os.environ.get(<span class="string">&#x27;XFORMERS_WINDOWS_PACKAGE&#x27;</span>, <span class="string">&#x27;https://gitclone.com/github.com/C43H66N12O12S2/stable-diffusion-webui/releases/download/f/xformers-0.0.14.dev0-cp310-cp310-win_amd64.whl&#x27;</span>)</span><br><span class="line"></span><br><span class="line">stable_diffusion_repo = os.environ.get(<span class="string">&#x27;STABLE_DIFFUSION_REPO&#x27;</span>, <span class="string">&quot;https://gitclone.com/github.com/CompVis/stable-diffusion.git&quot;</span>)</span><br><span class="line">taming_transformers_repo = os.environ.get(<span class="string">&#x27;TAMING_REANSFORMERS_REPO&#x27;</span>, <span class="string">&quot;https://gitclone.com/github.com/CompVis/taming-transformers.git&quot;</span>)</span><br><span class="line">k_diffusion_repo = os.environ.get(<span class="string">&#x27;K_DIFFUSION_REPO&#x27;</span>, <span class="string">&#x27;https://gitclone.com/github.com/crowsonkb/k-diffusion.git&#x27;</span>)</span><br><span class="line">codeformer_repo = os.environ.get(<span class="string">&#x27;CODEFORMET_REPO&#x27;</span>, <span class="string">&#x27;https://gitclone.com/github.com/sczhou/CodeFormer.git&#x27;</span>)</span><br><span class="line">blip_repo = os.environ.get(<span class="string">&#x27;BLIP_REPO&#x27;</span>, <span class="string">&#x27;https://gitclone.com/github.com/salesforce/BLIP.git&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>改完后，<strong>保存退出</strong>；</p>
+</li>
+<li><p>右键编辑webui-user.bat文件，找到下面的这一行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set COMMANDLINE_ARGS= </span><br></pre></td></tr></table></figure>
+
+<p>在其后添加参数:</p>
+<p><code>--skip-torch-cuda-test --precision full --no-half --deepdanbooru --use-cpu all</code></p>
+<p>使其变成：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set COMMANDLINE_ARGS= --skip-torch-cuda-test --precision full --no-half --deepdanbooru --use-cpu all</span><br></pre></td></tr></table></figure>
+
+<p>改完后，<strong>保存退出</strong>；</p>
+<blockquote>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ul>
+<li><h2 id="如果你想用Anaconda控制那大概4个G左右依赖库的存储位置，请”一定不要“在此时左键它或者使它运行，"><a href="#如果你想用Anaconda控制那大概4个G左右依赖库的存储位置，请”一定不要“在此时左键它或者使它运行，" class="headerlink" title="如果你想用Anaconda控制那大概4个G左右依赖库的存储位置，请”一定不要“在此时左键它或者使它运行，"></a>如果你想用Anaconda控制那大概4个G左右依赖库的存储位置，请”<strong>一定不要</strong>“在此时左键它或者使它运行，</h2></li>
+<li><h2 id="而需要在Anaconda-Prompt程序中新建好一个非系统path的python环境，激活该环境后cd到项目根目录下（这些操作参照方式一中相关内容），然后再运行它"><a href="#而需要在Anaconda-Prompt程序中新建好一个非系统path的python环境，激活该环境后cd到项目根目录下（这些操作参照方式一中相关内容），然后再运行它" class="headerlink" title="而需要在Anaconda Prompt程序中新建好一个非系统path的python环境，激活该环境后cd到项目根目录下（这些操作参照方式一中相关内容），然后再运行它"></a>而需要在Anaconda Prompt程序中新建好一个非系统path的python环境，激活该环境后cd到项目根目录下（这些操作参照方式一中相关内容），然后再运行它</h2></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="三、直接开始run项目开始第一次部署"><a href="#三、直接开始run项目开始第一次部署" class="headerlink" title="三、直接开始run项目开始第一次部署"></a>三、直接开始run项目开始第一次部署</h2><ul>
+<li><h5 id="使用Anaconda：（只要完成第一次部署后，以后再次运行可以直接点击webui-user-bat即运行）"><a href="#使用Anaconda：（只要完成第一次部署后，以后再次运行可以直接点击webui-user-bat即运行）" class="headerlink" title="使用Anaconda：（只要完成第一次部署后，以后再次运行可以直接点击webui-user.bat即运行）"></a>使用Anaconda：（只要完成第一次部署后，以后再次运行可以直接点击webui-user.bat即运行）</h5><ul>
+<li><h6 id="打开Anaconda-Prompt程序，激活某个想存放依赖库的py环境，"><a href="#打开Anaconda-Prompt程序，激活某个想存放依赖库的py环境，" class="headerlink" title="打开Anaconda Prompt程序，激活某个想存放依赖库的py环境，"></a>打开Anaconda Prompt程序，激活某个想存放依赖库的py环境，</h6></li>
+<li><h6 id="cd到项目根目录下，并输入命令-webui-user-bat，然后回车，"><a href="#cd到项目根目录下，并输入命令-webui-user-bat，然后回车，" class="headerlink" title="cd到项目根目录下，并输入命令.\webui-user.bat，然后回车，"></a>cd到项目根目录下，并输入命令<code>.\webui-user.bat</code>，然后回车，</h6></li>
+<li><h6 id="耐心等待，遇到下载超时报错的情况，再次执行上一步的命令就行"><a href="#耐心等待，遇到下载超时报错的情况，再次执行上一步的命令就行" class="headerlink" title="耐心等待，遇到下载超时报错的情况，再次执行上一步的命令就行"></a>耐心等待，遇到下载超时报错的情况，再次执行上一步的命令就行</h6></li>
+</ul>
+</li>
+<li><h5 id="不使用Anaconda（默认不控制依赖库位置）"><a href="#不使用Anaconda（默认不控制依赖库位置）" class="headerlink" title="不使用Anaconda（默认不控制依赖库位置）"></a>不使用Anaconda（默认不控制依赖库位置）</h5><ul>
+<li><h6 id="直接点击项目根目录下的webui-user-bat文件"><a href="#直接点击项目根目录下的webui-user-bat文件" class="headerlink" title="直接点击项目根目录下的webui-user.bat文件"></a>直接点击项目根目录下的webui-user.bat文件</h6></li>
+<li><h6 id="耐心等待，遇到下载超时报错的情况，点击继续退出命令行后再次点击该bat文件就行"><a href="#耐心等待，遇到下载超时报错的情况，点击继续退出命令行后再次点击该bat文件就行" class="headerlink" title="耐心等待，遇到下载超时报错的情况，点击继续退出命令行后再次点击该bat文件就行"></a>耐心等待，遇到下载超时报错的情况，点击继续退出命令行后再次点击该bat文件就行</h6></li>
+</ul>
+</li>
+<li><h6 id="如果前面操作无误，那么在一阵耐心的等待后，就会成功（如下图）："><a href="#如果前面操作无误，那么在一阵耐心的等待后，就会成功（如下图）：" class="headerlink" title="如果前面操作无误，那么在一阵耐心的等待后，就会成功（如下图）："></a>如果前面操作无误，那么在一阵耐心的等待后，就会成功（如下图）：</h6><p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202211050413166.png" alt="image-20221105041328858"></p>
+</li>
+<li><h5 id="对比前面使用命令控制launch-py文件部署启动，可以发现，此启动方式在启动时对电脑的压力比前者下一些，但警告语句也会多一些，经过实测，在同样的tag下，此方式比上一种方式在生成图片的过程中对CPU与内存的要求更高，但相对应的，质量也会更高，疑似pytorch的版本造成的影响（GPU版比CPU版更要求性能？）"><a href="#对比前面使用命令控制launch-py文件部署启动，可以发现，此启动方式在启动时对电脑的压力比前者下一些，但警告语句也会多一些，经过实测，在同样的tag下，此方式比上一种方式在生成图片的过程中对CPU与内存的要求更高，但相对应的，质量也会更高，疑似pytorch的版本造成的影响（GPU版比CPU版更要求性能？）" class="headerlink" title="对比前面使用命令控制launch.py文件部署启动，可以发现，此启动方式在启动时对电脑的压力比前者下一些，但警告语句也会多一些，经过实测，在同样的tag下，此方式比上一种方式在生成图片的过程中对CPU与内存的要求更高，但相对应的，质量也会更高，疑似pytorch的版本造成的影响（GPU版比CPU版更要求性能？）"></a>对比前面使用命令控制launch.py文件部署启动，可以发现，此启动方式在启动时对电脑的压力比前者下一些，但警告语句也会多一些，经过实测，在同样的tag下，此方式比上一种方式在生成图片的过程中对CPU与内存的要求更高，但相对应的，质量也会更高，疑似pytorch的版本造成的影响（GPU版比CPU版更要求性能？）</h5><p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202211050422950.png" alt="00000-3717904703-masterpiece, best quality,obliques , 1girl, magic, vivid, looking at viewer, from above, black hair, black eyes, floating, flowi"></p>
+</li>
+</ul>
 <h4 id="注：后面是一些level-4会参考到的教程"><a href="#注：后面是一些level-4会参考到的教程" class="headerlink" title="注：后面是一些level 4会参考到的教程"></a>注：后面是一些level 4会参考到的教程</h4><ul>
-<li><h6 id="NovelAi配置大致流程-AI-杀疯了，NovelAI开源教程-Jack-Cui的博客-CSDN博客-csnd-https-blog-csdn-net-c406495762-article-details-127419474"><a href="#NovelAi配置大致流程-AI-杀疯了，NovelAI开源教程-Jack-Cui的博客-CSDN博客-csnd-https-blog-csdn-net-c406495762-article-details-127419474" class="headerlink" title="NovelAi配置大致流程 AI 杀疯了，NovelAI开源教程_Jack-Cui的博客-CSDN博客_csnd](https://blog.csdn.net/c406495762/article/details/127419474))"></a><a href="%5B(13%E6%9D%A1%E6%B6%88%E6%81%AF">NovelAi配置大致流程</a> AI 杀疯了，NovelAI开源教程_Jack-Cui的博客-CSDN博客_csnd](<a target="_blank" rel="noopener" href="https://blog.csdn.net/c406495762/article/details/127419474">https://blog.csdn.net/c406495762/article/details/127419474</a>))</h6></li>
-<li><h6 id="让NovelAI强制用CPU跑"><a href="#让NovelAI强制用CPU跑" class="headerlink" title="让NovelAI强制用CPU跑"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ug411879W/?is_story_h5=false&p=1&share_from=ugc&share_medium=android&share_plat=android&share_session_id=ce19415d-0fc3-4a0e-bf27-587ec95ce2a3&share_source=QQ&share_tag=s_i&timestamp=1667406099&unique_k=mFMMnhr">让NovelAI强制用CPU跑</a></h6></li>
+<li><a href="%5B(13%E6%9D%A1%E6%B6%88%E6%81%AF">NovelAi配置大致流程</a> AI 杀疯了，NovelAI开源教程_Jack-Cui的博客-CSDN博客_csnd](<a target="_blank" rel="noopener" href="https://blog.csdn.net/c406495762/article/details/127419474">https://blog.csdn.net/c406495762/article/details/127419474</a>))</li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ug411879W/?is_story_h5=false&p=1&share_from=ugc&share_medium=android&share_plat=android&share_session_id=ce19415d-0fc3-4a0e-bf27-587ec95ce2a3&share_source=QQ&share_tag=s_i&timestamp=1667406099&unique_k=mFMMnhr">让NovelAI强制用CPU跑</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv19082388">用webui-user.bat开启项目</a></li>
+</ul>
+</li>
+<li><h6 id="https-www-bilibili-com-video-BV1ug411879W-is-story-h5-false-amp-p-1-amp-share-from-ugc-amp-share-medium-android-amp-share-plat-android-amp-share-session-id-ce19415d-0fc3-4a0e-bf27-587ec95ce2a3-amp-share-source-QQ-amp-share-tag-s-i-amp-timestamp-1667406099-amp-unique-k-mFMMnhr"><a href="#https-www-bilibili-com-video-BV1ug411879W-is-story-h5-false-amp-p-1-amp-share-from-ugc-amp-share-medium-android-amp-share-plat-android-amp-share-session-id-ce19415d-0fc3-4a0e-bf27-587ec95ce2a3-amp-share-source-QQ-amp-share-tag-s-i-amp-timestamp-1667406099-amp-unique-k-mFMMnhr" class="headerlink" title="https://www.bilibili.com/video/BV1ug411879W/?is_story_h5=false&amp;p=1&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=ce19415d-0fc3-4a0e-bf27-587ec95ce2a3&amp;share_source=QQ&amp;share_tag=s_i&amp;timestamp=1667406099&amp;unique_k=mFMMnhr)"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ug411879W/?is_story_h5=false&amp;p=1&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=ce19415d-0fc3-4a0e-bf27-587ec95ce2a3&amp;share_source=QQ&amp;share_tag=s_i&amp;timestamp=1667406099&amp;unique_k=mFMMnhr">https://www.bilibili.com/video/BV1ug411879W/?is_story_h5=false&amp;p=1&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=ce19415d-0fc3-4a0e-bf27-587ec95ce2a3&amp;share_source=QQ&amp;share_tag=s_i&amp;timestamp=1667406099&amp;unique_k=mFMMnhr</a>)</h6></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/11/03/%E7%AC%AC%E4%B8%89%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A%EF%BC%88py%EF%BC%89/" data-id="cl9zvnqfl00029wvd0ivgag2f" data-title="第三次课后作业（py）" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/11/03/%E7%AC%AC%E4%B8%89%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A%EF%BC%88py%EF%BC%89/" data-id="cla2yl79n000478vdffdz7tmv" data-title="第三次课后作业（py）" class="article-share-link">Share</a>
       
       
       
@@ -300,7 +401,7 @@
       
         <blockquote>
 <p><em>@file</em> <em>aferclass_jobs.c</em></p>
-<p><em>@author</em> <em>xunguang (<a href="mailto:&#x78;&#117;&#x6e;&#103;&#x75;&#x61;&#x6e;&#103;&#x40;&#x62;&#x6c;&#x61;&#99;&#107;&#45;&#x73;&#107;&#x79;&#108;&#x69;&#110;&#101;&#46;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x69;&#111;">&#x78;&#117;&#x6e;&#103;&#x75;&#x61;&#x6e;&#103;&#x40;&#x62;&#x6c;&#x61;&#99;&#107;&#45;&#x73;&#107;&#x79;&#108;&#x69;&#110;&#101;&#46;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x69;&#111;</a>)</em></p>
+<p><em>@author</em> <em>xunguang (<a href="mailto:&#x78;&#117;&#x6e;&#x67;&#117;&#x61;&#110;&#x67;&#x40;&#98;&#x6c;&#97;&#x63;&#x6b;&#x2d;&#x73;&#107;&#121;&#x6c;&#105;&#110;&#x65;&#x2e;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#105;&#111;">&#x78;&#117;&#x6e;&#x67;&#117;&#x61;&#110;&#x67;&#x40;&#98;&#x6c;&#97;&#x63;&#x6b;&#x2d;&#x73;&#107;&#121;&#x6c;&#105;&#110;&#x65;&#x2e;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#105;&#111;</a>)</em></p>
 <p><em>@brief</em></p>
 <p><em>@version</em> <em>0.1</em></p>
 <p><em>@date</em> <em>2022-10-25</em></p>
@@ -334,7 +435,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/11/03/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A%EF%BC%88C%E8%AF%AD%E8%A8%80%EF%BC%89/" data-id="cl9zvnqfp00049wvd25ae4vjp" data-title="第二次课后作业（C语言）" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/11/03/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A%EF%BC%88C%E8%AF%AD%E8%A8%80%EF%BC%89/" data-id="cla2yl79k000278vdfjvh0xpw" data-title="第二次课后作业（C语言）" class="article-share-link">Share</a>
       
       
       
@@ -384,7 +485,7 @@
 
 <h6 id="the-sixth-step"><a href="#the-sixth-step" class="headerlink" title="the sixth step"></a>the sixth step</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hello\ world</span><br></pre></td></tr></table></figure>
 
-<h6 id="the-final-display"><a href="#the-final-display" class="headerlink" title="the final display"></a>the final display</h6><h1 id="Level-0-5"><a href="#Level-0-5" class="headerlink" title="Level 0.5 :"></a>Level 0.5 :</h1><p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210222110024.png" alt="level_1_display"></p>
+<h6 id="the-final-display"><a href="#the-final-display" class="headerlink" title="the final display"></a>the final display</h6><h1 id="Level-0-5"><a href="#Level-0-5" class="headerlink" title="Level 0.5 :"></a>Level 0.5 :</h1><p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210222110024.png" alt="level_1_display"></p>
 <h1 id="Level-1-："><a href="#Level-1-：" class="headerlink" title="Level 1 ："></a>Level 1 ：</h1><p>得出的<strong>flag</strong>：<code>flag&#123;2Hy_1s_50_cut3!&#125;</code></p>
 <h6 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.在根目录执行文件夹的新建需要管理员权限  sudo</span><br><span class="line">sudo mkdir 2Hy</span><br><span class="line">2.为了让名称中含有特殊意义字符的文件与文件夹中的能被正常识别，应该使用&quot;&quot; 或 &#x27;&#x27; 将其包裹引用或者将名称里的特殊字符用 \ 进行转义处理 例如</span><br><span class="line">touch &#x27;yyz_qswd@12dfep[efrgtc๑۩۞۩๑♡m1net♡◕◕♡⊙●○①⊕.txt&#x27;</span><br><span class="line">touch yyz_qswd@12dfep\[efrgtc๑۩۞۩๑♡m1net♡◕◕♡⊙●○①⊕</span><br><span class="line">mv yyz_qswd@12dfep\[efrgtc๑۩۞۩๑♡m1net♡◕◕♡⊙●○①⊕ &quot;L1 Ha0&quot;</span><br></pre></td></tr></table></figure>
 
@@ -396,13 +497,13 @@
 <p>环境类：<strong>Node.js 、 github</strong></p>
 </blockquote>
 <h3 id="正式开始前的准备"><a href="#正式开始前的准备" class="headerlink" title="正式开始前的准备"></a>正式开始前的准备</h3><h4 id="首先，"><a href="#首先，" class="headerlink" title="首先，"></a>首先，</h4><p>要将<code>git</code> 和 <code>Node.js</code> 从官网上下载到本地，过程这里不过多地赘述（node.js建议下载长期支持版、git则是下载最新版），（对于windows操作系统而言）下载好之后地两个程序并不是我们需要的材料本体，而是安装程序，如图：</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210222131524.jpg" alt="NodeJs安装程序展示"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210222131524.jpg" alt="NodeJs安装程序展示"></p>
 <p>点击执行安装程序后，除了安装路径以外，其他选项按照默认的一直点击next就行，但值得一提的是，对于新手来说，安装git时建议勾选上“ git bash here ”，安装Node.js 时遇到含有PATH选项时，一定要选择将其勾选上（自动帮你把node.js添加到环境变量），而且node.js相关工具包下载也建议勾选上；</p>
 <h4 id="其次，"><a href="#其次，" class="headerlink" title="其次，"></a>其次，</h4><p>在安装完成后，输入如下代码：</p>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v  //  检查node.js版本信息</span><br><span class="line">npm -v  //  检查Node包管理器的版本信息</span><br><span class="line">git --version  //  检查git版本信息</span><br></pre></td></tr></table></figure>
 
 <p>若安装成功，则效果如下图（会出现版本信息），否则，应该是安装过程出了岔子，要重新安装一次：（）</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210222146473.jpg" alt="检查版本信息"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210222146473.jpg" alt="检查版本信息"></p>
 <h4 id="然后，"><a href="#然后，" class="headerlink" title="然后，"></a>然后，</h4><p>给 <code>npm</code> 设置成阿里的国内镜像：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 
@@ -414,14 +515,14 @@
 <p>若没有github账号，就到  <del><strong>（全球最大职业交流交友平台）</strong></del>  GitHub官网去注册账号，注册成功后来到首页在右上角点击加号并新建一个github仓库（new repository）：</p>
 <p><img src="https://pic4.zhimg.com/80/v2-d540634267b3fbffa9d3bd887cc66827_720w.webp"></p>
 <p>创建选项如下图：</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210222212075.jpg" alt="创建GitHub仓库"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210222212075.jpg" alt="创建GitHub仓库"></p>
 <h5 id="重点，记录该仓库的地址-网址-：https-github-com-Black-Skyline-Black-Skyline-github-io"><a href="#重点，记录该仓库的地址-网址-：https-github-com-Black-Skyline-Black-Skyline-github-io" class="headerlink" title="重点，记录该仓库的地址(网址)：https://github.com/Black-Skyline/Black-Skyline.github.io"></a>重点，记录该仓库的地址(网址)：<code>https://github.com/Black-Skyline/Black-Skyline.github.io</code></h5><p>另外，git也需要提前配置一下，随便找个位置进入git命令行，然后输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 配置用户名和邮箱</span><br><span class="line">git config --global user.name &quot;github 用户名&quot;  </span><br><span class="line">git config --global user.email &quot;github 注册邮箱&quot;</span><br><span class="line"># 与github弄成同一个用户名方便管理，邮箱是全称，如：1234@qq.com</span><br><span class="line"></span><br><span class="line"># 然后检查是否配置成功</span><br><span class="line">git config -l</span><br><span class="line"># 若出现有下面两行提示信息，则配置成功</span><br><span class="line">user.email=···(上面配置的邮箱)</span><br><span class="line">user.name=···(上面配置的用户名)</span><br></pre></td></tr></table></figure>
 
 
 
 <h3 id="开始建站，"><a href="#开始建站，" class="headerlink" title="开始建站，"></a>开始建站，</h3><h4 id="首先，-1"><a href="#首先，-1" class="headerlink" title="首先，"></a>首先，</h4><p>选择一个文件夹（或新建）作为博客网站在本地的存储位置，我的选择是：”D:\HexoBlog\FirstBlog”.</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210222227033.jpg" alt="网站在本地的储存位置"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210222227033.jpg" alt="网站在本地的储存位置"></p>
 <h4 id="然后，-1"><a href="#然后，-1" class="headerlink" title="然后，"></a>然后，</h4><p>进入此文件夹，在此处唤出git命令行（鼠标空白处右键 &gt; <em><strong>Git Bash Here</strong></em>）,输入以下命令完成初始化：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init .</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
@@ -434,7 +535,8 @@
 <blockquote>
 <p><strong>hexo s</strong> 是开启本地的Hexo 服务器的命令，这时可以打开浏览器，在地址栏中输入 <code>localhost:4000</code> 就可以看到本地的网页效果了。</p>
 </blockquote>
-<p>效果大致如下：（这张图有问题，但图就是博客的图片）</p>
+<p>效果大致如下：</p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202211042014195.jpg" alt="效果测试"></p>
 <h4 id="最后，"><a href="#最后，" class="headerlink" title="最后，"></a>最后，</h4><p>按 <em><strong>Ctrl+C</strong></em> 中断退出服务器的运行，至此，基础的模版页面便已经搭建好了。</p>
 <h6 id="注：hexo-s-命令也可以换成-hexo-server-，两者是等价的"><a href="#注：hexo-s-命令也可以换成-hexo-server-，两者是等价的" class="headerlink" title="注：hexo s 命令也可以换成 hexo server ，两者是等价的"></a>注：<code>hexo s</code> 命令也可以换成 <code>hexo server</code> ，两者是等价的</h6><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><p>由于平台原因（GitHub Page只支持静态页面和文件），所以在博客部署前需要先生成对应的静态文件，然后再将其部署到GitHub</p>
 <p>所需命令如下：</p>
@@ -469,7 +571,7 @@
 
 <p>注：可能会失败几次，大概率是因为与github的网络通信不太稳定，所以可多尝试几次</p>
 <p>部署成功后，GitHub对应仓库的截图如下：</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210231315277.jpg" alt="提交部署后的仓库截图"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210231315277.jpg" alt="提交部署后的仓库截图"></p>
 <p>此时博客可以对外访问了，在网址栏输入 <code>black-skyline.github.io</code> 即可访问</p>
 <h3 id="建立一个备份"><a href="#建立一个备份" class="headerlink" title="建立一个备份"></a>建立一个备份</h3><p>使用版本控制器 <code>git</code> 新建一个分支<strong>backup</strong>用于备份本地文件：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in D:/HexoBlog/FirstBlog/.git/</span><br><span class="line"></span><br><span class="line">用户名@git命令行名 /d/HexoBlog/FirstBlog (master)</span><br><span class="line">$ git add .</span><br><span class="line">warning: LF will be replaced by CRLF in package-lock.json.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line">warning: LF will be replaced by CRLF in package.json.</span><br><span class="line">The file will have its original line endings in your working directory</span><br><span class="line"></span><br><span class="line">用户名@git命令行名 /d/HexoBlog/FirstBlog (master)</span><br><span class="line">$ git commit -m &quot;first commit in local branch master&quot;</span><br><span class="line">[master (root-commit) abc1925] first commit in local branch master</span><br><span class="line"> 11 files changed, 4331 insertions(+)</span><br><span class="line"> create mode 100644 .github/dependabot.yml</span><br><span class="line"> create mode 100644 .gitignore</span><br><span class="line"> create mode 100644 _config.landscape.yml</span><br><span class="line"> create mode 100644 _config.yml</span><br><span class="line"> create mode 100644 package-lock.json</span><br><span class="line"> create mode 100644 package.json</span><br><span class="line"> create mode 100644 scaffolds/draft.md</span><br><span class="line"> create mode 100644 scaffolds/page.md</span><br><span class="line"> create mode 100644 scaffolds/post.md</span><br><span class="line"> create mode 100644 source/_posts/hello-world.md</span><br><span class="line"> create mode 100644 themes/.gitkeep</span><br><span class="line"></span><br><span class="line">用户名@git命令行名 /d/HexoBlog/FirstBlog (master)</span><br><span class="line">$ git checkout -b backup</span><br><span class="line">Switched to a new branch &#x27;backup&#x27;</span><br><span class="line"></span><br><span class="line">用户名@git命令行名 /d/HexoBlog/FirstBlog (backup)</span><br><span class="line">$ git add .</span><br><span class="line"></span><br><span class="line">用户名@git命令行名 /d/HexoBlog/FirstBlog (backup)</span><br><span class="line">$ git commit -m &quot;first commit in local branch backup&quot;</span><br><span class="line">On branch backup</span><br><span class="line">nothing to commit, working tree clean</span><br><span class="line"></span><br><span class="line">用户名@git命令行名 /d/HexoBlog/FirstBlog (backup)</span><br><span class="line">$ git branch -l</span><br><span class="line">* backup</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
@@ -485,23 +587,23 @@
 <blockquote>
 <h3 id="该怎么让你从本地放入MarkDwon文档的图片成为“网络图片”——能从非本地看到"><a href="#该怎么让你从本地放入MarkDwon文档的图片成为“网络图片”——能从非本地看到" class="headerlink" title="该怎么让你从本地放入MarkDwon文档的图片成为“网络图片”——能从非本地看到"></a>该怎么让你从本地放入MarkDwon文档的图片成为“网络图片”——能从非本地看到</h3></blockquote>
 <h2 id="PicGO"><a href="#PicGO" class="headerlink" title="PicGO"></a>PicGO</h2><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><h6 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h6><p>一个软件，GitHub上的开源项目，功能强大（具体可百度）</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210231346805.jpg" alt="picgo是啥"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210231346805.jpg" alt="picgo是啥"></p>
 <h6 id="有啥用"><a href="#有啥用" class="headerlink" title="有啥用"></a>有啥用</h6><p>可以简单的理解为本地端与服务器端的<strong>中转站</strong>，本地图片可经由它发送到服务器成为网络图片</p>
 <h4 id="下载完后开始配置"><a href="#下载完后开始配置" class="headerlink" title="下载完后开始配置"></a>下载完后开始配置</h4><p>首先，如上图所说，本体式没有华为云的图床支持的，因此需要配置支持插件</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210231349119.jpg" alt="picgo插件配置"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210231349119.jpg" alt="picgo插件配置"></p>
 <p>然后进入<em><strong>图床设置</strong></em>：</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210231355234.jpg" alt="华为云OBS图床设置"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210231355234.jpg" alt="华为云OBS图床设置"></p>
 <p>其中，第一行是由华为云服务器随机生成的一个类似于上传功能的”接口账号“。第二行就是对应的密码了，第五行就是图片在服务器里的存放目录。其他的均是在服务器的设置，不进行赘述。</p>
 <p>配置完成后可以去“<em><strong>上传区</strong></em>”试一试，这里就不作演示了。</p>
 <h2 id="Typora-中设置PicGo-图床实现图片自动上传"><a href="#Typora-中设置PicGo-图床实现图片自动上传" class="headerlink" title="Typora 中设置PicGo 图床实现图片自动上传"></a>Typora 中设置PicGo 图床实现图片自动上传</h2><h4 id="配置图像设置"><a href="#配置图像设置" class="headerlink" title="配置图像设置"></a>配置图像设置</h4><p>从左上角“<strong>文件</strong>”选项里点击“<strong>偏好设置</strong>”，勾选上下图的选项</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210231407330.jpg" alt="typora里的图像设置"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210231407330.jpg" alt="typora里的图像设置"></p>
 <h4 id="验证图片上传是否成功"><a href="#验证图片上传是否成功" class="headerlink" title="验证图片上传是否成功"></a>验证图片上传是否成功</h4><p>点击上图的“<strong>验证图片上传选项</strong>”，等待一下，如果出现PicGo的上传成功提示，那就算配置成功</p>
-<p><img src="https://obs-4731.obs.cn-north-4.myhuaweicloud.com/img_shitsky/202210231411184.jpg" alt="typora上传验证"></p>
+<p><img src="https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210231411184.jpg" alt="typora上传验证"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/23/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/" data-id="cl9zvnqfj00019wvdh89lfmzn" data-title="第一次课后作业" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/23/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/" data-id="cla2yl79i000178vde2qlfmvz" data-title="第一次课后作业" class="article-share-link">Share</a>
       
       
       
@@ -554,7 +656,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/23/hello-world/" data-id="cl9zvnqfe00009wvdf4ux8boj" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/23/hello-world/" data-id="cla2yl79e000078vdfhkgbc0f" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
