@@ -3,8 +3,8 @@
     <channel>
         <title>黑色天际线的博客空间</title>
         <subtitle>天高路远，逆水行云</subtitle>
-        <icon>https://github.com/Black-Skyline/Black-Skyline.github.io/images/favicon.ico</icon>
-        <link>https://github.com/Black-Skyline/Black-Skyline.github.io</link>
+        <icon>https://black-skyline.github.io/images/favicon.ico</icon>
+        <link>https://Black-Skyline.github.io</link>
         <author>
           <name>寻光</name>
         </author>
@@ -14,14 +14,14 @@
         <lastBuildDate>Sun, 29 Oct 2023 20:54:29 +0800</lastBuildDate>
         <category term="学习笔记" />
         <item>
-            <guid isPermalink="true">https://github.com/Black-Skyline/Black-Skyline.github.io/2023/10/29/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/RedRock-SRE-%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/</guid>
+            <guid isPermalink="true">https://black-skyline.github.io/2023/10/29/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/RedRock-SRE-%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/</guid>
             <title>RedRock_SRE_第一次课后作业</title>
-            <link>https://github.com/Black-Skyline/Black-Skyline.github.io/2023/10/29/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/RedRock-SRE-%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/</link>
-            <category term="更多" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/categories/%E6%9B%B4%E5%A4%9A/" />
-            <category term="作业" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/categories/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/" />
-            <category term="redrock" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/tags/redrock/" />
-            <category term="作业" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/tags/%E4%BD%9C%E4%B8%9A/" />
-            <category term="hexo" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/tags/hexo/" />
+            <link>https://black-skyline.github.io/2023/10/29/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/RedRock-SRE-%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/</link>
+            <category term="更多" scheme="https://black-skyline.github.io/categories/%E6%9B%B4%E5%A4%9A/" />
+            <category term="作业" scheme="https://black-skyline.github.io/categories/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/" />
+            <category term="redrock" scheme="https://black-skyline.github.io/tags/redrock/" />
+            <category term="作业" scheme="https://black-skyline.github.io/tags/%E4%BD%9C%E4%B8%9A/" />
+            <category term="hexo" scheme="https://black-skyline.github.io/tags/hexo/" />
             <pubDate>Sun, 29 Oct 2023 20:54:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;level-0&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#level-0&#34;&gt;#&lt;/a&gt; Level 0 :&lt;/h1&gt;
 &lt;h6 id=&#34;the-first-step&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#the-first-step&#34;&gt;#&lt;/a&gt; the first step&lt;/h6&gt;

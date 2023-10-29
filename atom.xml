@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://github.com/Black-Skyline/Black-Skyline.github.io</id>
+    <id>https://Black-Skyline.github.io</id>
     <title>黑色天际线的博客空间</title>
     <subtitle>天高路远，逆水行云</subtitle>
-    <icon>https://github.com/Black-Skyline/Black-Skyline.github.io/images/favicon.ico</icon>
-    <link href="https://github.com/Black-Skyline/Black-Skyline.github.io" />
+    <icon>https://black-skyline.github.io/images/favicon.ico</icon>
+    <link href="https://Black-Skyline.github.io" />
     <author>
       <name>寻光</name>
     </author>
     <updated>2023-10-29T12:54:29.000Z</updated>
     <category term="学习笔记" />
     <entry>
-        <id>https://github.com/Black-Skyline/Black-Skyline.github.io/2023/10/29/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/RedRock-SRE-%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/</id>
+        <id>https://black-skyline.github.io/2023/10/29/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/RedRock-SRE-%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/</id>
         <title>RedRock_SRE_第一次课后作业</title>
-        <link rel="alternate" href="https://github.com/Black-Skyline/Black-Skyline.github.io/2023/10/29/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/RedRock-SRE-%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/"/>
+        <link rel="alternate" href="https://black-skyline.github.io/2023/10/29/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/RedRock-SRE-%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/"/>
         <content type="html">&lt;h1 id=&#34;level-0&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#level-0&#34;&gt;#&lt;/a&gt; Level 0 :&lt;/h1&gt;
 &lt;h6 id=&#34;the-first-step&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#the-first-step&#34;&gt;#&lt;/a&gt; the first step&lt;/h6&gt;
 &lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd Desktop/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -172,11 +172,11 @@
 &lt;p&gt;点击上图的 “&lt;strong&gt;验证图片上传选项&lt;/strong&gt;”，等待一下，如果出现 PicGo 的上传成功提示，那就算配置成功&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://obssh.obs.cn-east-3.myhuaweicloud.com/img_xunguang/202210231411184.jpg&#34; alt=&#34;typora上传验证&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="更多" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/categories/%E6%9B%B4%E5%A4%9A/" />
-        <category term="作业" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/categories/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/" />
-        <category term="redrock" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/tags/redrock/" />
-        <category term="作业" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/tags/%E4%BD%9C%E4%B8%9A/" />
-        <category term="hexo" scheme="https://github.com/Black-Skyline/Black-Skyline.github.io/tags/hexo/" />
+        <category term="更多" scheme="https://black-skyline.github.io/categories/%E6%9B%B4%E5%A4%9A/" />
+        <category term="作业" scheme="https://black-skyline.github.io/categories/%E6%9B%B4%E5%A4%9A/%E4%BD%9C%E4%B8%9A/" />
+        <category term="redrock" scheme="https://black-skyline.github.io/tags/redrock/" />
+        <category term="作业" scheme="https://black-skyline.github.io/tags/%E4%BD%9C%E4%B8%9A/" />
+        <category term="hexo" scheme="https://black-skyline.github.io/tags/hexo/" />
         <updated>2023-10-29T12:54:29.000Z</updated>
     </entry>
 </feed>
